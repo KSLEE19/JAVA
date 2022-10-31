@@ -1,4 +1,4 @@
-package practice;
+package practice;  //BufferedWriter.flush()는 마지막에 한번만 해서 버퍼를 출력하고 비워주기만 하면 됨
 
 import java.io.*;
 import java.util.Vector;
