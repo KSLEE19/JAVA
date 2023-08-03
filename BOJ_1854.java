@@ -55,10 +55,6 @@ public class BOJ_1854 {
             } else {
                 System.out.println(-1);
             }
-
-            if(distance_arr[i].size()<k) {
-                System.out.println(-1);
-            } else System.out.println(distance_arr[i].peek);
         }
 
     }
