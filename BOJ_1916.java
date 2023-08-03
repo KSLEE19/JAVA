@@ -37,11 +37,16 @@ public class BOJ_1916 {
             check[now] = true;
             for (Bus b : graph[now]) {
                 int next = b.city;
-                int temp = cost_arr[next];
-                cost_arr[next] = Math.min(cost_arr[next], cost_arr[now] + b.cost);
-                if (temp != cost_arr[next]) {
+                if (cost_arr[next] > cost_arr[now] + b.cost) {
+                    cost_arr[next] = cost_arr[now] + b.cost;
                     pq.add(new Bus(next, cost_arr[next]));
                 }
+//                int temp = cost_arr[next];
+//                cost_arr[next] = Math.min(cost_arr[next], cost_arr[now] + b.cost);
+//                if (temp != cost_arr[next]) {
+//                    pq.add(new Bus(next, cost_arr[next]));
+//                }
+
             }
         }
         System.out.println(cost_arr[dst]);
